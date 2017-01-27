@@ -1,0 +1,46 @@
+{
+  "name": "portfolio-para2017",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
+    "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'public/js/app/**/*.js' 'public/js/app/**/*.js.map' '!public/js/app/bundle.js' '!public/js/app/*.chunk.js' 'assets/app/**/*.ngfactory.ts' 'assets/app/**/*.shim.ngstyle.ts' 'assets/app/**/*.ngsummary.json'"
+  },
+  "dependencies": {
+    "@angular/common": "^2.4.5",
+    "@angular/compiler": "^2.4.5",
+    "@angular/compiler-cli": "^2.4.5",
+    "@angular/core": "^2.4.5",
+    "@angular/forms": "^2.4.5",
+    "@angular/http": "^2.4.5",
+    "@angular/platform-browser": "^2.4.5",
+    "@angular/platform-browser-dynamic": "^2.4.5",
+    "@angular/platform-server": "^2.4.5",
+    "@angular/router": "^3.4.5",
+    "@angular/upgrade": "^2.4.5",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "core-js": "^2.4.1",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "hbs": "~4.0.1",
+    "morgan": "~1.7.0",
+    "rxjs": "^5.0.3",
+    "serve-favicon": "~2.3.0",
+    "zone.js": "^0.7.6"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.35",
+    "@types/node": "^7.0.4",
+    "angular2-router-loader": "^0.3.4",
+    "angular2-template-loader": "^0.6.0",
+    "awesome-typescript-loader": "^3.0.0-beta.18",
+    "del-cli": "^0.2.1",
+    "html-loader": "^0.4.4",
+    "raw-loader": "^0.5.1",
+    "typescript": "^2.1.5",
+    "webpack": "^2.2.0",
+    "webpack-merge": "^2.5.0"
+  }
+}
