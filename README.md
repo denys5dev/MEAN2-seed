@@ -2,4 +2,4 @@
 
 1. npm install
 2. npm start
-3. mpm build(in other window)
+3. npm build(in other window)
